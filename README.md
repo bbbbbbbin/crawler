@@ -5,9 +5,9 @@
 
 目前包含：
 
-[BOSS直聘](./job_boss/job_boss.md)
+[BOSS直聘](./job_boss)
 
-[B站相关数据----千锋教育](./qianfeng/qianfeng.md)
+[B站相关数据----千锋教育](./qianfeng)
 
 
 
