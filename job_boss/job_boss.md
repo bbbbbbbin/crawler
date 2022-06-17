@@ -42,3 +42,8 @@ parse_html()
 
 init_browser()：应用扫码登陆并记录cookies以供获取网页页面时使用
 
+
+
+
+职位描述可以再爬
+#container > div.user-jobs-area > div > div.job-list-wrap > div.jobs-list > ul > li:nth-child(1) > a > div.job-primary.clearfix > div.info-primary-wrap > h3 > a > div.info-detail > div.detail-bottom > div.detail-bottom-text

@@ -1,9 +1,9 @@
 '''
 Author: cn_lion
 Date: 2022-06-16 14:25:04
-LastEditTime: 2022-06-16 18:44:41
+LastEditTime: 2022-06-18 00:16:58
 description: description your project
-FilePath: \vscode\crawler\job.py
+FilePath: \vscode\crawler\job_boss\job_boss.py
 '''
 # -*- coding: utf-8 -*-
 
@@ -160,7 +160,7 @@ def parse_html(html,jobs):
 
 
 if __name__ == '__main__':
-    # browser = init_browser()
+    browser = init_browser()
     citycode = get_citydata()
     job = '数据分析'
     city = '广州'
@@ -173,5 +173,5 @@ if __name__ == '__main__':
         i += 1
     print('获取数据完成，正在写入数据')
     data = pd.DataFrame(jobs).T
-    data.to_csv('data.csv')
+    data.to_csv('data_{0}_{1}.csv'.format(city, job))
     print('结束')
