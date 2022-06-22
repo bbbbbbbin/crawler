@@ -1,7 +1,7 @@
 '''
 Author: cn_lion
 Date: 2022-06-20 21:03:21
-LastEditTime: 2022-06-20 23:40:37
+LastEditTime: 2022-06-22 14:44:53
 description: description your project
 FilePath: \vscode\crawler\job_lagou\job_lagou.py
 '''
@@ -38,7 +38,7 @@ def init_browser():
 
 if __name__ == '__main__':
     # browser = init_browser()
-    job,city = '数据分析','广州'
+    job,city = '数据分析','厦门'
 
     # 初始化浏览器，可以对浏览器进行登陆操作等，最终保持浏览器处于第一页的页面
     url = 'https://www.lagou.com/wn/jobs?kd={0}&city={1}&pn=1'.format(urllib.parse.quote(job),urllib.parse.quote(city))
