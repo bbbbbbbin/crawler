@@ -1,7 +1,7 @@
 '''
 Author: cn_lion
 Date: 2022-06-16 14:25:04
-LastEditTime: 2022-06-20 19:02:44
+LastEditTime: 2022-06-23 16:57:29
 description: description your project
 FilePath: \vscode\crawler\job_boss\job_boss.py
 '''
@@ -173,5 +173,5 @@ if __name__ == '__main__':
         i += 1
     print('获取数据完成，正在写入数据')
     data = pd.DataFrame(jobs).T
-    data.to_csv('data_{0}_{1}.csv'.format(city, job))
+    data.to_csv('crawler/job_boss/boss_data_{0}_{1}.csv'.format(city, job))
     print('结束')
