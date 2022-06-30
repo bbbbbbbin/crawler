@@ -1,7 +1,7 @@
 '''
 Author: cn_lion
 Date: 2022-06-16 14:25:04
-LastEditTime: 2022-06-23 16:57:29
+LastEditTime: 2022-06-28 21:42:29
 description: description your project
 FilePath: \vscode\crawler\job_boss\job_boss.py
 '''
@@ -115,7 +115,7 @@ def get_url(job,city,pages,citycode):
     options.add_experimental_option("excludeSwitches", ['enable-automation','enable-logging'])
     options.add_argument('-ignore-certificate-errors')
     options.add_argument('-ignore -ssl-errors')
-    options.add_argument("headless")
+    # options.add_argument("headless")
     browser = webdriver.Chrome('crawler\chromedriver.exe',chrome_options=options)
     cookies = pickle.load(open("cookies.pkl", "rb"))
     browser.get(url)
@@ -160,10 +160,10 @@ def parse_html(html,jobs):
 
 
 if __name__ == '__main__':
-    browser = init_browser()
+    # browser = init_browser()
     citycode = get_citydata()
-    job = '数据分析'
-    city = '武汉'
+    job = '爬虫'
+    city = '广州'
     jobs = {}
     for i in range(10):
         print("正在获取第{}页".format(i+1))
