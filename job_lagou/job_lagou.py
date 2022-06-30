@@ -1,7 +1,7 @@
 '''
 Author: cn_lion
 Date: 2022-06-20 21:03:21
-LastEditTime: 2022-06-22 14:44:53
+LastEditTime: 2022-06-28 21:27:28
 description: description your project
 FilePath: \vscode\crawler\job_lagou\job_lagou.py
 '''
@@ -38,7 +38,7 @@ def init_browser():
 
 if __name__ == '__main__':
     # browser = init_browser()
-    job,city = '数据分析','厦门'
+    job,city = '爬虫','广州'
 
     # 初始化浏览器，可以对浏览器进行登陆操作等，最终保持浏览器处于第一页的页面
     url = 'https://www.lagou.com/wn/jobs?kd={0}&city={1}&pn=1'.format(urllib.parse.quote(job),urllib.parse.quote(city))
@@ -55,8 +55,8 @@ if __name__ == '__main__':
     html = browser.find_element(By.ID, 'jobList')
     html = html.get_attribute('innerHTML')
     soup = BeautifulSoup(html, "html.parser")
-    pages = len(soup(class_ = re.compile('^lg-pagination-item')))
-
+    pages = len(soup(class_ = re.compile('^lg-pagination-item lg-pagination-item')))
+    print('共{}页'.format(pages))
     waiter = input('回车继续\n')
 
 
